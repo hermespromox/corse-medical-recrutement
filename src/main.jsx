@@ -43,11 +43,10 @@ const steps = [
 ]
 
 const faqs = [
-  ['Quand les honoraires sont-ils facturés ?', 'Uniquement lorsque le médecin recruté prend effectivement ses fonctions dans votre établissement. Aucun acompte, abonnement ou frais de lancement n’est demandé.'],
+  ['Comment démarre une mission de recrutement ?', 'Nous commençons par qualifier précisément le poste, son organisation, les conditions proposées et le calendrier souhaité. La recherche est lancée après validation commune du besoin.'],
   ['Quels médecins sont présentés ?', 'Des médecins déjà inscrits à l’Ordre en France ou disposant d’une autorisation valide leur permettant d’y exercer. Chaque situation administrative est vérifiée avant présentation.'],
-  ['Que couvre la garantie de trois mois ?', 'Si le médecin quitte son poste pendant les trois premiers mois, nous relançons gratuitement une recherche pour le même poste. Il s’agit d’une nouvelle mission, et non d’un remboursement.'],
   ['Pouvez-vous aider à l’installation en Corse ?', 'Oui. Selon le besoin, nous pouvons faciliter une première visite, une période d’immersion, la recherche d’un logement, l’installation familiale et les échanges administratifs avant la prise de poste.'],
-  ['Combien de temps un candidat présenté est-il protégé ?', 'Un médecin introduit auprès de l’établissement est considéré comme présenté pendant 12 mois. Les honoraires restent dus en cas de recrutement direct ou indirect pendant cette période.']
+  ['Combien de temps un candidat présenté est-il protégé ?', 'Un médecin introduit auprès de l’établissement est considéré comme présenté pendant 12 mois, y compris auprès de ses structures affiliées ou partenaires.']
 ]
 
 function App() {
@@ -90,7 +89,7 @@ function App() {
         <nav className={`nav ${menuOpen ? 'nav-open' : ''}`} aria-label="Navigation principale">
           <button onClick={() => scrollTo('approche')}>Notre approche</button>
           <button onClick={() => scrollTo('specialites')}>Spécialités</button>
-          <button onClick={() => scrollTo('tarification')}>Tarification</button>
+          <button onClick={() => scrollTo('engagement')}>Accompagnement</button>
           <button onClick={() => scrollTo('faq')}>FAQ</button>
         </nav>
         <button className="header-cta" onClick={() => scrollTo('contact')}>Démarrer une recherche <Arrow /></button>
@@ -118,14 +117,14 @@ function App() {
               <span className="map-label label-bastia">Bastia</span>
               <span className="map-label label-ajaccio">Ajaccio</span>
             </div>
-            <div className="hero-metric metric-main"><strong>0 €</strong><span>avant la prise de poste</span></div>
-            <div className="hero-metric metric-small"><strong>3 mois</strong><span>de garantie de remplacement</span></div>
+            <div className="hero-metric metric-main"><strong>Au succès</strong><span>une mission menée jusqu’à la prise de poste</span></div>
+            <div className="hero-metric metric-small"><strong>Profils vérifiés</strong><span>droit d’exercice contrôlé avant présentation</span></div>
           </div>
         </section>
 
         <section className="proof-band" aria-label="Les engagements clés">
-          <article><span className="proof-number">15 000 € HT</span><span>par médecin recruté</span></article>
-          <article><span className="proof-number">100 % au succès</span><span>aucun recrutement, aucun honoraire</span></article>
+          <article><span className="proof-number">Recherche active</span><span>approche directe des profils</span></article>
+          <article><span className="proof-number">Projet qualifié</span><span>mobilité et installation vérifiées</span></article>
           <article><span className="proof-number">Droit d’exercice vérifié</span><span>avant toute présentation</span></article>
           <article><span className="proof-number">1 interlocuteur</span><span>jusqu’à la prise de poste</span></article>
         </section>
@@ -187,31 +186,30 @@ function App() {
           </div>
         </section>
 
-        <section className="pricing-section" id="tarification">
+        <section className="pricing-section" id="engagement">
           <div className="pricing-copy">
-            <p className="eyebrow">TARIFICATION TRANSPARENTE</p>
-            <h2>Vous payez quand le médecin prend ses fonctions.</h2>
-            <p>Aucun acompte, aucun abonnement, aucun frais de lancement et aucun paiement pour les candidats simplement présentés.</p>
+            <p className="eyebrow">UN ACCOMPAGNEMENT COMPLET</p>
+            <h2>Une mission conçue autour de votre besoin.</h2>
+            <p>Chaque recherche est calibrée selon la spécialité, le territoire, l’organisation du service et les conditions d’installation proposées.</p>
             <div className="guarantee-box">
-              <span className="tag">GARANTIE</span>
-              <h3>Remplacement pendant 3 mois</h3>
-              <p>Si le médecin quitte son poste au cours des trois premiers mois, une nouvelle recherche est relancée gratuitement pour le même poste.</p>
+              <span className="tag">SUR MESURE</span>
+              <h3>Une première analyse de faisabilité</h3>
+              <p>Nous étudions votre besoin, identifions les principaux leviers d’attractivité et définissons avec vous les critères de recherche prioritaires.</p>
             </div>
           </div>
           <div className="price-card">
-            <span className="price-label">HONORAIRES AU SUCCÈS</span>
-            <div className="price"><strong>15 000 €</strong><span>HT</span></div>
-            <p>par médecin recruté et effectivement installé</p>
+            <span className="price-label">LA MISSION COMPREND</span>
+            <h3 className="service-title">De la recherche à l’installation</h3>
+            <p>Un interlocuteur unique coordonne l’ensemble du processus.</p>
             <ul>
               <li><Check />Qualification complète du besoin</li>
               <li><Check />Approche directe et présélection</li>
               <li><Check />Vérification du droit d’exercice</li>
               <li><Check />Organisation des entretiens</li>
+              <li><Check />Accompagnement à la mobilité</li>
               <li><Check />Suivi jusqu’à la prise de poste</li>
-              <li><Check />Garantie de remplacement de 3 mois</li>
             </ul>
             <button className="button button-primary button-full" onClick={() => scrollTo('contact')}>Lancer une recherche <Arrow /></button>
-            <span className="no-risk">Aucun recrutement : aucun honoraire.</span>
           </div>
         </section>
 
@@ -254,7 +252,7 @@ function App() {
             <p className="eyebrow eyebrow-light">DÉMARRER UNE RECHERCHE</p>
             <h2>Parlons du poste à pourvoir.</h2>
             <p>Indiquez-nous la spécialité recherchée, la localisation, les conditions du poste et la date de prise de fonctions souhaitée. Nous revenons vers vous avec une première analyse de faisabilité, sans frais initiaux.</p>
-            <div className="contact-promise"><strong>Un médecin recruté et installé : 15 000 € HT.</strong><span>Aucun recrutement : aucun honoraire.</span></div>
+            <div className="contact-promise"><strong>Une recherche ciblée, construite autour de votre établissement.</strong><span>Un accompagnement continu jusqu’à la prise de poste.</span></div>
           </div>
           <form className="lead-form" onSubmit={submitLead}>
             <input type="text" name="website" className="honeypot" tabIndex="-1" autoComplete="off" aria-hidden="true" />
@@ -283,8 +281,8 @@ function App() {
           <span className="brand-mark" aria-hidden="true"><span /><span /><span /><span /></span>
           <span>CORSE MÉDICAL</span>
         </div>
-        <p>Recrutement médical spécialisé en Corse, facturé uniquement au succès.</p>
-        <div className="footer-links"><button onClick={() => scrollTo('approche')}>Notre approche</button><button onClick={() => scrollTo('tarification')}>Tarification</button><button onClick={() => scrollTo('contact')}>Contact</button></div>
+        <p>Recherche active et accompagnement jusqu’à la prise de poste en Corse.</p>
+        <div className="footer-links"><button onClick={() => scrollTo('approche')}>Notre approche</button><button onClick={() => scrollTo('engagement')}>Accompagnement</button><button onClick={() => scrollTo('contact')}>Contact</button></div>
         <div className="footer-legal"><span>© {new Date().getFullYear()} Corse Médical</span><span>Protection des candidatures : 12 mois</span></div>
       </footer>
     </div>
