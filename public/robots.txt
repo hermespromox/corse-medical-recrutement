@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://corse-medical-recrutement.vercel.app/sitemap.xml
